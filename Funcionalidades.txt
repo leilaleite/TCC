@@ -1,0 +1,11 @@
+Funcionalidades:
+
+1)_ Site Web
+2)_ Carrinho de compras;
+3)_ Comentar produtos no facebook e twintar;
+4)_ Calcular frete nos correios; 
+5)_ escolher embalagens "cores, fitas"
+6)_ cadastro de clientes
+7)_ Linguagem de programação Java, banco mysql
+
+Obs: Poderá ocorrer alterações ao decorrer do trabalhO.  
