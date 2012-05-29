@@ -1,11 +1,18 @@
+
+Trabalho  Conclusão  Curso
+
+Tema:Site web de venda de Bem Casados.
+
 Funcionalidades:
 
-1)_ Site Web
-2)_ Carrinho de compras;
-3)_ Comentar produtos no facebook e twintar;
-4)_ Calcular frete nos correios; 
-5)_ escolher embalagens "cores, fitas"
-6)_ cadastro de clientes
-7)_ Linguagem de programação Java, banco mysql
+1)_ Carrinho de compras, com visualisação dos iten selecionados;
+2)_ opção de "curtir" produtos no facebook e twittar;
+3)_ Calcular frete nos correios; 
+4)_ escolher embalagens (cores e fitas) onde há a opção de montar uma embalagem e acompanhar visualizualizando cada modificação feita pelo mesmo.
+5)_ cadastro de clientes ao efetuar compra o usuário terá que ter logon ou fazer o cadastro.
+
+Linguagem de programação:
+
+1)_Java, banco mysql
 
 Obs: Poderá ocorrer alterações ao decorrer do trabalhO.  
