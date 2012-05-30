@@ -1,8 +1,8 @@
- ###Trabalho de Conclusão de Curso Tema: Site web de venda de Bem CasadOS
+ Trabalho de Conclusão de Curso Tema: Site web de venda de Bem CasadOS
 =======================================================================
 
 
-####Datas prevista para entrega:
+Datas prevista para entrega:
 --------------------------------
 
 
