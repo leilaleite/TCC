@@ -1,11 +1,11 @@
 
-###Trabalho  Conclusão  Curso
+Trabalho  Conclusão  Curso
 ===========================
 
-####Tema:Site web de venda de Bem Casados.
+Tema:Site web de venda de Bem Casados.
 -------------------------------------
 
-####Funcionalidades:
+Funcionalidades:
 ---------------
 
 * Carrinho de compras, com visualisação dos iten selecionados;
@@ -14,7 +14,7 @@
 *escolher embalagens (cores e fitas) onde há a opção de montar uma embalagem e acompanhar visualizualizando cada modificação feita pelo mesmo.
 *cadastro de clientes ao efetuar compra o usuário terá que ter logon ou fazer o cadastro.
 
-####Linguagem de programação:
+Linguagem de programação:
 -----------------------------
 
 *Java, banco mysql
