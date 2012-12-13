@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+	<div id="tudo">
+
+		<div id="topo">
+			<div id="barra-superior">
+				<ul id="menu-superior">
+					<li>Seja Bem Vindo !! <a
+						 href="cadastrocliente.jsf">Faça
+							seu login ou Cadastre-se</a></li>
+					<li>Compre pelo telefone (11) 2917-4225</li>
+				</ul>
+			</div>
+
+			<div id="cabecalho">
+				<h:link outcome="index">
+					<a href="index.jsf"><img src="imagens/logo.png" /></a>
+				</h:link>
+
+				<div id="busca">
+				<h:form>
+				<p:autoComplete id="acSimple" value="#{produtoBean.lazyProdutoDataModel.filtro}"   
+                completeMethod="#{produtoBean.lazyProdutoDataModel.complete}"/>  			
+			<h:commandLink action="#{produtoBean.lazyProdutoDataModel.filtrar}" value="Buscar" />
+		</h:form>	
+</div>
+
+		
+
+				<h:form>
+				<div id="carro">
+					<ul>
+						<li>Meu Carrinho</li>
+						<li>Item: <h:commandLink action="#{carrinhoDeCompraBean.finalizar}" value="#{carrinhoDeCompraBean.tamanhoCarrinho}" /></li>
+						<li>Total: R$ <h:outputLabel value="#{carrinhoDeCompraBean.valorTotalCompra}" /> </li>
+					</ul>
+					<img alt="" src="imagens/carro.png" />
+				</div>
+				</h:form>
+				
+					<div id="barraLogin">
+		   <ui:include src="login.xhtml" />
+	             </div>
+	             
+
+			</div>
+
+		</div>
+
+
+		<div id="menu">
+			<ul id="menu-inferior">
+			
+				<li><a href="produtocompra.jsf">Produtos</a></li>
+				<li><a href="embalagem.jsf">Monte o Seu</a></li>
+				<li><a href="quemsomos.jsf">Quem Somos</a></li>
+				<li><a href="email.jsf">Contato</a></li>
+				<li><a href="localizacao.jsf">Localização</a></li>
+			</ul>
+		</div>
+		
+
+		</div>
+		
+	
+</h:body>
+
+
+</html>

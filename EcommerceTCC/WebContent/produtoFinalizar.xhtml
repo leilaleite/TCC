@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	>
+<ui:composition template="/template.xhtml">
+	<ui:define name="head">
+		<link rel="stylesheet" type="text/css" href="produtosTabela.css" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<h:form >
+			<h:dataTable id="tabela" value="#{carrinhoDeCompraBean.itens}" var="item"
+	    			binding="#{carrinhoDeCompraBean.datatableCarrinho}"
+			>
+
+				<h:column>
+					<f:facet name="header">Categoria</f:facet>
+					#{item.produto.categoria.nome}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Imagem</f:facet>
+					<h:graphicImage value="#{item.produto.foto}" style="width: 25px; height: 25px" />
+				</h:column>
+	
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					#{item.produto.nome}
+				</h:column>
+				
+			
+				<h:column>
+					<f:facet name="header">Quantidade</f:facet>
+	                <p:spinner id="ajaxspinner" value="#{item.quantidade}" size="2">  
+	                    <p:ajax update="valortotal" process="@this" />  
+	                </p:spinner>  
+				</h:column>
+								
+				<h:column>
+					<f:facet name="header">Valor Unitario</f:facet>
+	                <h:outputText value="#{item.produto.preco}" >
+						<f:convertNumber type="currency" />
+					</h:outputText>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Valor Total</f:facet>
+	                <h:outputText id="valortotal" value="#{item.valorTotal}" >
+						<f:convertNumber type="currency" />
+					</h:outputText>
+				</h:column>
+			
+				<h:column>
+					<f:facet name="header">Remover</f:facet>
+	                <h:commandLink action="#{carrinhoDeCompraBean.removerItem}"  value="X" />
+				</h:column>
+
+			</h:dataTable>
+			
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+
+
+
+
+
+</html>

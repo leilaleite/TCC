@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template.xhtml">
+	<ui:define name="conteudo">
+	<link rel="stylesheet" type="text/css" href="site.css" />
+<div id="titulo"><p>Simulador</p></div>	
+<div id="simulador_texto">
+<p>Seja Bem-Vindo(a) ao Simulador de Embalagem - Juntos Bem Casados</p></div>
+<div id= "simulador_subTexto">
+<p>Descubra a embalagem perfeita para o seu evento,com cores, fitas, papéis!</p>
+</div>
+	
+<div id="cores_fita">
+<p>Fita</p>
+<h:panelGrid columns="1">
+<p:graphicImage value="/imagens/simImag/COR_FITA/bege.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/branco.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/laranja.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/lilas.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/ouro.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/preta.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/rosa.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/verde.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/verdeclaro.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_FITA/vermelha.png" height="30px" width="50px" />
+</h:panelGrid>
+</div>
+<div id ="cores_papel">
+<h:panelGrid columns="1">
+<p>Pepel</p>
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/bege.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/branca.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/laranja.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/lilas.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/ouro.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/prata.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/preta_sel.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/rosa.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/verde.png" height="30px" width="50px" />
+<p:graphicImage value="/imagens/simImag/COR_PAPEL/vermelho.png" height="30px" width="50px" />
+</h:panelGrid>
+</div>
+
+<div id= "prod">
+<p:graphicImage value="/imagens/simImag/PAPEL/sombra.png" height="300px" width="300px" />
+
+</div>
+
+
+</ui:define>
+</ui:composition>
+</html>

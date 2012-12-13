@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template.xhtml">
+	<ui:define name="conteudo">
+
+		<div id="Cadastro">
+			<div id="titulo">
+				<p>Cadastro</p>
+			</div>
+
+<div id="texto">Preencha o formulário abaixo sem usar pontos e traços:  </div>
+			<h:form id="form">
+
+				<h:panelGrid columns="4" styleClass="tabela_cadastro">
+
+
+
+					<p:outputLabel for="nome" value="Nome: " />
+					<p:inputText id="nome" value="#{clienteBean.cliente.nome}"
+						required="true">
+						<f:validateLength minimum="2" />
+					</p:inputText>
+
+					<p:outputLabel for="apelido" value="Apelido: " />
+					<p:inputText id="apelido" value="#{clienteBean.cliente.apelido}"
+						required="true">
+						<f:validateLength minimum="2" />
+					</p:inputText>
+					
+					 <p:outputLabel for="telefone" value="Telefone: " />
+					<p:inputText id="telefone" value="#{cliente.cliente.telefone}"
+						required="true">
+					
+					</p:inputText>
+					
+					
+					<p:outputLabel for="sexoRadio" value="Sexo: " />
+					<h:selectOneRadio id="sexoRadio" value="#{clienteBean.cliente.sexo}">  
+						<f:selectItem itemLabel="Masculino" itemValue="M"  />  
+						<f:selectItem itemLabel="Feminino" itemValue="F"/>  
+                    </h:selectOneRadio>
+
+					
+						
+				
+                    <p:outputLabel for="RG" value="RG: " />
+					<p:inputText id="RG" value="#{clienteBean.cliente.rg}"
+						required="true">
+						<f:validateLength minimum="1" />
+					</p:inputText>
+
+					<p:outputLabel for="cpf" value="Cpf: " />
+					<p:inputText id="cpf" value="#{clienteBean.cliente.cpf}"
+						required="true">
+						<f:validateLength minimum="1" />
+					</p:inputText>
+
+		
+					<p:outputLabel for="email" value="Email: " />
+					<p:inputText id="email" value="#{clienteBean.cliente.email}" />
+
+					<p:outputLabel for="login" value="Login: " />
+					<h:panelGroup>
+						<p:inputText id="login" value="#{clienteBean.cliente.login}"
+							required="true" />
+						<!--  	<f:validator
+							 validatorId="ecommerce.validator.LoginValidator" />
+						<f:ajax event="blur" render="loginMessage" /> 
+					</p:inputText>-->
+						<h:message id="loginMessage" for="login" style="color: red;" />
+					</h:panelGroup>
+
+					<p:outputLabel for="senha" value="Senha: " />
+					<p:password id="senha" value="#{clienteBean.cliente.senha}"
+						feedback="true" match="senha1" label="Senha" required="true">
+						<f:validateLength minimum="2" maximum="8" />
+					</p:password>
+
+					<p:outputLabel for="senha1" value="Validação Senha: " />
+					<p:password id="senha1" value="#{clienteBean.cliente.senha}"
+						label="Validacao Senha" required="true">
+						<f:validateLength minimum="2" maximum="8" />
+					</p:password>
+
+
+					
+					<p:outputLabel for="CEP" value="CEP: " />
+					<p:inputText id="CEP" value="#{clienteBean.cliente.endereco.cep}"
+						required="true" >
+						<f:ajax event="blur" listener="#{clienteBean.consultaCEP}" execute="@this" render="panelEndereco"></f:ajax>
+					</p:inputText>
+					
+
+
+
+
+
+
+
+					
+
+				</h:panelGrid>
+				
+<div id="texto">Coloque apenaso endereço de entrega</div>
+
+					<h:panelGrid columns="4" id="panelEndereco" styleClass="tabela_cadastro" >
+						<p:outputLabel for="estado" value="Estado: " />
+							<p:selectOneMenu id="estado" value="#{clienteBean.estado}">
+							<f:ajax execute="@this" render="cidade"></f:ajax>
+							<f:selectItems value="#{clienteBean.estados}" var="estadoVar" itemLabel="#{estadoVar.nome}" itemValue="#{estadoVar.idestado}"></f:selectItems>
+						</p:selectOneMenu>
+					
+						<p:outputLabel for="cidade" value="Cidade: " />
+						<p:selectOneMenu id="cidade" value="#{clienteBean.cidade}">
+							<f:selectItems value="#{clienteBean.cidades}" var="cidadeVar" itemLabel="#{cidadeVar.cidade}" itemValue="#{cidadeVar.idcidade}"></f:selectItems>
+						</p:selectOneMenu>
+						
+						<p:outputLabel for="bairro" value="Bairro: " />
+						<p:inputText id="bairro" value="#{clienteBean.cliente.endereco.bairro}">
+						</p:inputText>
+	
+						<p:outputLabel for="rua" value="Rua: " />
+						<p:inputText id="rua" value="#{clienteBean.cliente.endereco.rua}">
+						</p:inputText>
+	
+						<p:outputLabel for="numero" value="Numero: " />
+						<p:inputText id="numero" value="#{clienteBean.cliente.enderecoNumero}">
+						</p:inputText>
+	
+						<p:outputLabel for="complemento" value="Complemento: " />
+						<p:inputText id="complemento" value="#{clienteBean.cliente.enderecoComplemento}">
+						</p:inputText>
+ 					</h:panelGrid>
+					<h:commandButton action="#{clienteBean.gravar}" value="Salvar" />
+
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

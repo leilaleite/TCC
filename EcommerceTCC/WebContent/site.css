@@ -1,0 +1,429 @@
+@CHARSET "ISO-8859-1";
+
+/* Zerando configuracoes */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*--Topo--*/
+#topo {
+	height: 50px;
+	height: 100%;
+}
+
+/*--Menu Superior--*/
+#barra-superior {
+	clear: both;
+	height: 40px;
+	width: 100%;
+	background-color: #142752;
+	font-size: small;
+}
+
+#menu-superior {
+	float: right;
+	line-height: 15px;
+	padding: 10px 15px 5px 0px;
+	height: 100%;
+}
+
+#menu-superior li {
+	float: left;
+	padding-left: 20px;
+	list-style: none;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#menu-superior li a {
+	color: white;
+}
+
+#menu-superior li {
+	color: white;
+}
+
+#menu-superior strong {
+	float: left;
+	color: #FFF;
+}
+
+#menu-superior strong.sair {
+	border-left: 1px solid white;
+	padding-left: 20px;
+}
+
+#menu-superior strong.nome {
+	border-right: 1px solid white;
+	padding-right: 20px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	background:#3333FF;
+	color:#3333FF;
+	text-decoration: underline;
+}
+
+/*--Cabecalho--*/
+#cabecalho {
+	background-color: #376092;
+	padding: 5px;
+}
+
+#busca {
+	height: auto;
+	position: absolute;
+	top: 60px;
+	left: 350px;
+	background-image: url(imagens/busca.png);
+	background-repeat: no-repeat;
+	padding: 15px;
+}
+
+#carro {
+	float: right;
+	line-height: 20px;
+	padding: 15px;
+	position: absolute;
+	right: 20px;
+	top: 30px;
+	background-color: transparent;
+}
+
+#carro ul li {
+	color: white;
+	list-style-type: none;
+}
+
+#carro img {
+	width: 85px;
+	float: right;
+}
+
+#carro ul {
+	float: right;
+	padding-top: 20px;
+}
+
+/*--Menu Inferior--*/
+#menu {
+	clear: both;
+	height: 40px;
+	width: 100%;
+	background-color: #376092;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu-inferior {
+	float: left;
+	border-top: 1px solid #B0E2FF;
+	font-size: x-large;
+	font-famil: Arial, Geneva, Verdana, Helvetica, sans-serif;
+	font-style: normal;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu-inferior li {
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: 15%;
+	text-align: center;
+}
+
+#menu-inferior li a {
+	color: white;
+}
+
+/*---Menu Inferior---*/
+#menu {
+	clear: both;
+	height: 40px;
+	width: 100%;
+	background-color: #376092;
+	min-width: 960px;
+}
+
+#menu-inferior {
+	float: left;
+	line-height: 20px;
+	padding: 0px;
+}
+
+#menu-inferior li {
+	float: left;
+	padding-left: 20px;
+	margin: 0px 20px 20px 0px;
+}
+
+#menu-inferior li a {
+	color: white;
+}
+
+#menu-inferior li {
+	color: white;
+}
+
+#menu-inferior {
+	border-top: 1px solid #B0E2FF;
+}
+
+#menu-inferior {
+	font: x-large;
+	Arial: Geneva, Verdana, Helvetica, sans-serif;
+}
+
+a.botaomenu {
+	text-decoration: none;
+	padding: 3px 12px;
+	text-shadow: 1px 1px 0px black;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	border: 1px solid #dcdcdc;
+	border-radius: 6px;
+	background-color: #376092;
+	color: white;
+	margin: 4px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+a.botaomenu:HOVER {
+	background-color: black;
+	color: blue;
+	text-shadow: 1px 1px 0px white;
+}
+
+#menu-lateral {
+	font: Arial, Geneva, Verdana, Helvetica, sans-serif;
+	font-size: xx-small;
+	width: 100%;
+	a: hover;
+}
+
+#menu-lateral li {
+	padding: 30px 80px 30px 20px;
+	list-style: decimal-leading-zero;
+	background-repeat: no-repeat;
+	background: #FFD700;
+}
+
+#barraLogin {
+	font-size: medium;
+	float: right;
+	padding: 1px;
+	color: white;
+}
+
+/*Cadastro*/
+.login {
+	text-align: center;
+	table-layout: auto;
+}
+
+.error {
+	color: #D20005;
+}
+
+.logintable {
+	margin: 0 auto;
+	width: 250px;
+}
+
+div#conteudoCentro {
+	clear: both;
+	background-color: aqua;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#conteudesquerda {
+	float: left;
+	color: blue;;
+	background-color: white;
+	width: 15%;
+	margin-top: 1px;
+	margin-left: 1px;
+	padding-left: 10px;
+	padding-top: 50px;
+	line-height: 90px;
+	font-size: x-large;
+	font-famil: Arial, Geneva, Verdana, Helvetica, sans-serif;
+	font-style: normal;
+	text-align: left;
+	border: 10px;
+	border: double;
+	border-color: #376092;
+}
+
+div#conteudo {
+	width: 75%;
+	float: left;
+}
+
+#conteudoDireita {
+	float: right;
+	color: white;
+	background-color: #CCCCCC;
+	width: 10%;
+	margin-top: 1px;
+	margin-right: 1px;
+	padding-right: 10px;
+	padding-top: 1px;
+	line-height: 50pt;
+	font-size: x-large;
+	font-famil: Arial, Geneva, Verdana, Helvetica, sans-serif;
+	font-style: normal;
+	text-align: center;
+}
+
+div#rodape {
+	clear: both;
+	background-color:#CCCCCC;
+	width: 100%;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+}
+
+div#plugins {
+	float: right;
+	clear: both;
+	background-color: navy;
+	width: 100%;
+	color: white;
+}
+
+div#titulo {
+	margin-top: 10px;
+	text-align: center;
+	font-size: xx-large;
+	imag: center;
+}
+
+.tabela_cadastro {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	font-family: sans-serif;
+	font-size: large;
+}
+
+.contato {
+	float: right;
+}
+
+div#texto {
+	font-size: x-large;
+	text-align: center;
+	margin-top: 50px;
+	font-family: cursive;
+}
+
+div#mapa {
+	text-align: center;
+	margin-left: 10%;
+	margin-top: 70px;
+}
+
+div#form {
+	margin-top: 50px;
+	text-align: center;
+}
+
+div#painel {
+	margin-top: 30px;
+	text-align: center;
+	font-size: large;
+}
+
+form#formulario {
+	text-align: center;
+	margin-top:90px; 
+	width : 432px;
+	margin: 30px;
+	width: 432px;
+}
+
+form#formulario label {
+	text-align: center;
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+form#formulario small {
+	color: red;
+}
+
+form#formulario input {
+	float: right;
+}
+
+form#formulario textarea {
+	float: right;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+form#formulario span {
+	float: left;
+	font-size: 13px;
+	line-height: 25px;
+}
+
+form#formulario input.botao {
+	float: none;
+	margin: 0 auto;
+}
+div#cores_fita{
+	margin-top: 90px;
+	margin-left: 30px;
+	
+}
+div#cores_papel{
+	margin-right:30px;
+	
+}
+div#simulador_texto{
+	margin-top:30px;
+	text-align:center;
+	font-family: inherit;
+	font-style:inherit;
+    font-size:x-large;
+    font:bold;
+    margin-left: 10px;
+    
+}
+div#simulador_subTexto{
+	font-size: large;
+	text-align: center;
+	color: blue;
+}
+
+.embalagemDiv {
+	position: relative;
+}
+
+.embalagem {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}

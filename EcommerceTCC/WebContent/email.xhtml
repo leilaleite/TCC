@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:composition template="/template.xhtml">
+	<ui:define name="conteudo">
+	<link rel="stylesheet" type="text/css" href="site.css" />
+	
+  <div id="titulo"><p>Contato</p></div> 
+ <div id="texto"> <p>Para informações, dúvidas ou marcar degustação utilize os contatos abaixo preencha os campos indicados e depois clique em enviar.</p></div>
+ 
+
+	
+	<h:form>
+			<h:messages/>
+			<h:panelGrid columns="2"  styleClass="tabela_cadastro">
+			
+			
+				<h:outputLabel value="Nome: "/>
+				<h:inputText value="#{emailBean.nome}"/>
+
+				<h:outputLabel value="Email: "/>
+				<h:inputText value="#{emailBean.email}"/>
+			
+				<h:outputLabel value="Telefone: "/>
+				<h:inputText value="#{emailBean.telefone}"/>
+				
+				<h:outputLabel value="Comentario: "/>
+				<h:inputTextarea value="#{emailBean.comentario}"/>
+		
+				<h:commandButton action="#{emailBean.enviarEmail}" value="Enviar"/>
+			</h:panelGrid>
+			
+			
+		</h:form>
+ 
+ </ui:define>
+ </ui:composition>
+</html>

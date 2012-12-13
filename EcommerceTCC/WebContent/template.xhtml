@@ -1,0 +1,49 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title><ui:insert name="title">Default title</ui:insert></title>
+	<link href="site.css" rel="stylesheet" type="text/css" media="all" />
+</h:head>
+
+<h:body>
+
+	<div id="cabecalho">
+		<ui:include src="Cabecalho.xhtml" />
+	</div>
+
+	<div id="conteudoCentro">
+
+		 <div id="conteudesquerda">
+			<ui:insert name="conteudoesquerda">
+				<ui:include src="menuesquerda.xhtml" />
+			</ui:insert>
+		</div>
+
+		<div id="conteudo">
+			<p:messages />
+			<ui:insert name="conteudo" />
+		</div>
+		</div>
+
+	<!--<div id="conteudoDireita">
+			<ui:insert name="conteudoDireita">
+				<ui:include src="menuDireita.xhtml" />
+			</ui:insert>
+		</div>
+	</div>-->
+
+	<div id="rodape">
+		<ui:insert name="rodape" />
+		<ui:include src="rodape.xhtml"></ui:include>
+	</div>
+
+</h:body>
+
+</html>

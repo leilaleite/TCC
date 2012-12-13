@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	>
+
+<ui:composition template="/template.xhtml">
+	<ui:define name="head">
+		<link rel="stylesheet" type="text/css" href="produtos-tabela.css" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<h:form>
+			<h:dataTable value="#{produtoBean.produtos}" var="p"
+					styleClass="tabela-produtos"
+	    			headerClass="tabela-produtos-cabecalho"
+	    			rowClasses="tabela-produtos-linhas-pares,tabela-produtos-linhas-impares"
+	    			binding="#{produtoBean.datatableProdutos}"
+			>
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					#{p.nome}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Valor</f:facet>
+					#{p.valor}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Categoria</f:facet>
+					#{p.categoria.nome}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Imagem</f:facet>
+					<h:graphicImage value="/imagens/produtos/#{p.imagem}" style="width: 25px; height: 25px" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Imagem</f:facet>
+					<h:commandLink value="Comprar" action="#{produtoBean.comprarTabela}" />
+				</h:column>
+				
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

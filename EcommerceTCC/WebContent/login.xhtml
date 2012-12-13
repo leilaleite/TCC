@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:form>
+	
+	<h:panelGrid columns="5" rendered="#{loginBean.cliente==null}">
+		<h:outputLabel for="login" value="Usuario"></h:outputLabel>
+		<h:inputText id="login" value="#{loginBean.usuario}" required="true" requiredMessage="Usuario Obrigatorio" size="5" label="Login"/>
+		<h:outputLabel for="senha" value="Senha"></h:outputLabel>
+		<h:inputSecret value="#{loginBean.senha}" required="true" requiredMessage="Senha Obrigatorio" size="5" label="Senha" />
+		<h:commandLink actionListener="#{loginBean.login}" value="OK" />
+	</h:panelGrid>
+
+	<h:panelGrid columns="2" rendered="#{loginBean.cliente!=null}">
+		<h:outputText value="#{loginBean.cliente.nome}" />
+		<h:commandButton action="#{loginBean.logout}" value="Logout" />
+	</h:panelGrid>
+
+</h:form>
+
+
+
+</html>
+
+

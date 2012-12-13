@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="template.xhtml">
+	<ui:define name="conteudo">
+	
+
+		<h:form>
+
+			<h:panelGrid columns="2">
+				<h:outputLabel for="nome" value="Nome: "></h:outputLabel>
+				<h:inputText id="nome" value="#{produtoBean.produto.nome}" />
+
+				<h:outputLabel for="categoria" value="Categoria: "></h:outputLabel>
+				<h:inputText id="categoria" value="#{produtoBean.produto.categoria}" />
+
+				<h:outputLabel for="cod" value="Codigo: "></h:outputLabel>
+				<h:inputText id="cod" value="#{produtoBean.produto.cod}" />
+
+				<h:outputLabel for="preco" value="Preço: "></h:outputLabel>
+				<h:inputText id="preco" value="#{produtoBean.produto.preco}" />
+
+				<h:outputLabel for="sabor" value="Sabor: "></h:outputLabel>
+				<h:inputText id="sabor" value="#{produtoBean.produto.sabor}" />
+
+
+				<h:outputLabel for="tamanho" value="Tamaho: "></h:outputLabel>
+				<h:inputText id="tamanho" value="#{produtoBean.produto.tamanho}" />
+
+				<h:commandButton action="#{produtoBean.atualizar}" value="Salvar" />
+			</h:panelGrid>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
+	
+	

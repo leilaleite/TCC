@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template.xhtml">
+	<ui:define name="conteudo">
+
+		<div id="Cadastro">
+			<div id="titulo">
+				<p>Simulador</p>
+				<div id="simulador_texto">
+<p>Seja Bem-Vindo(a) ao Simulador de Embalagem </p></div>
+<div id= "simulador_subTexto">
+<p>Descubra a embalagem perfeita para o seu evento,com cores, fitas, papéis!</p>
+</div>
+			</div>
+
+			<h:form id="form">
+
+				<h:panelGrid columns="2" styleClass="tabela_cadastro">
+
+					<p:outputLabel for="corLaco" value="Laco: " />
+					<h:selectOneMenu id="corLaco" value="#{embalagemBean.lacoCor}" >
+						<f:ajax event="change" execute="@this" render="corLacoImg" />  
+						<f:selectItems value="#{embalagemBean.lacos}" />
+                    </h:selectOneMenu>
+
+					<p:outputLabel for="corPapel" value="Papel: " />
+					<h:selectOneMenu id="corPapel" value="#{embalagemBean.papelCor}" >
+						<f:ajax event="change" execute="@this" render="corPapelImg" />  
+						<f:selectItems value="#{embalagemBean.papeis}" />
+                    </h:selectOneMenu>
+                    
+                    
+					<h:panelGroup class="embalagemDiv">
+						<h:graphicImage id="corLacoImg" value="#{embalagemBean.lacoCor}" styleClass="embalagem" />
+						<h:graphicImage id="corPapelImg" value="#{embalagemBean.papelCor}" styleClass="embalagem" />
+					</h:panelGroup>
+
+
+
+
+
+
+					
+
+				</h:panelGrid>
+
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>
